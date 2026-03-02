@@ -1,67 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
   min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e2e8f0;
+  padding: 20px;
 }
 
+/* CONTAINER PRINCIPAL */
+.app {
+  width: 100%;
+  max-width: 850px;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* HEADER */
 header {
   text-align: center;
-  padding: 40px 20px;
+  margin-bottom: 30px;
 }
 
-.container {
-  width: 90%;
-  max-width: 900px;
-  margin: auto;
-  display: grid;
-  gap: 20px;
+header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
+header p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* CARDS */
 .card {
-  background: #1e293b;
+  background: rgba(51, 65, 85, 0.6);
   padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* FORM */
+form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 input {
-  padding: 10px;
-  width: 70%;
-  border-radius: 6px;
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
   border: none;
+  background: #0f172a;
+  color: white;
 }
 
+input:focus {
+  outline: 2px solid #38bdf8;
+}
+
+/* BOTÃO */
 button {
-  padding: 10px 15px;
+  padding: 12px 18px;
+  border-radius: 10px;
   border: none;
-  border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
-  background-color: #38bdf8;
-  margin-left: 10px;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  color: white;
+  transition: 0.3s ease;
 }
 
 button:hover {
-  background-color: #0ea5e9;
+  transform: scale(1.05);
 }
 
+/* LISTA */
 ul {
   list-style: none;
   margin-top: 15px;
 }
 
 li {
-  background: #334155;
-  padding: 8px;
+  background: #0f172a;
+  padding: 10px 15px;
+  border-radius: 10px;
   margin-bottom: 8px;
-  border-radius: 6px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  opacity: 0.6;
 }
